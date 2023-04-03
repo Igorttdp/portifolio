@@ -26,8 +26,8 @@ export const Project = (): JSX.Element => {
   useEffect(() => {
     const fetchData = async () => {
       const data: Response = await fetch(
-        `https://api.github.com/users/${userData.githubUser}/repos`
-      )
+        `https://api.github.com/users/${userData.githubUser}/repos?sort=updated`
+      );
 
       const json = await data.json();
 
